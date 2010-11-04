@@ -34,6 +34,16 @@
 
 $route['default_controller'] = "welcome";
 
+// URI like '/en/about' -> use controller 'about'
+$route['^fr/(.+)$'] = "$1";
+$route['^en/(.+)$'] = "$1";
+$route['^de/(.+)$'] = "$1";
+
+// '/en' and '/fr' URIs -> use default controller
+$route['^fr$'] = $route['default_controller'];
+$route['^en$'] = $route['default_controller'];
+$route['^de$'] = $route['default_controller'];
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
