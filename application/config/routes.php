@@ -32,18 +32,16 @@
 | would be loaded.
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "start";
 
-// URI like '/en/about' -> use controller 'about'
-$route['^fr/(.+)$'] = "$1";
-$route['^en/(.+)$'] = "$1";
-$route['^de/(.+)$'] = "$1";
+// We load routes for all languages in the $config['langages'] array
+$langs = $this->config->item('langs');
 
-// '/en' and '/fr' URIs -> use default controller
-$route['^fr$'] = $route['default_controller'];
-$route['^en$'] = $route['default_controller'];
-$route['^de$'] = $route['default_controller'];
-
+// using foreach loop we map language route
+foreach($langs as $key=>$value){
+ $route[$key] = "default_controller";
+ $route["^$key/(.+)"] = "$1";
+}
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

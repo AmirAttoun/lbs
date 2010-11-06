@@ -13,6 +13,33 @@
 */
 $config['base_url']	= "http://localhost:8888/";
 
+
+
+/* languages
+
+
+*/
+
+$config['langs'] = array(
+    'en'=>array('folder'=>'english','name'=>'english'),
+    'es'=>array('folder'=>'spanish','name'=>'español'),
+    'fr'=>array('folder'=>'french','name'=>'francais'),
+    'de'=>array('folder'=>'german','name'=>'deutsch'),
+    );
+
+// Now we define language as LANG constant
+$exploded = explode('/',$_SERVER['REQUEST_URI']);
+if( isset($config['langs'][$exploded['1']]) ){
+ $config['language'] = $config['langs'][$exploded['1']]['folder'];
+ define('LANG',$exploded['1']);
+ define('LANG_FLAG','1');
+}
+else {
+ $config['language'] = 'english';
+ define('LANG','en');
+}
+
+
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -23,7 +50,7 @@ $config['base_url']	= "http://localhost:8888/";
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "";
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -66,7 +93,7 @@ $config['url_suffix'] = "";
 | than english.
 |
 */
-$config['language']	= "english";
+//$config['language']	= "english";
 
 /*
 |--------------------------------------------------------------------------
