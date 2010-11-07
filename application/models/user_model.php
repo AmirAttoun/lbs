@@ -11,12 +11,12 @@ class User_model extends CI_Model{
 	* Created on 		7.10.2010 by Joris Morger, jorismorger@gmail.com
 	* Last modified		x.xx.xxxx by xxxxxxxxxxxx, xxxxxxxxxx@xxx.xx
 	*/
-	function check_google_login_exists(){
+	function check_if_google_login_exists(){
 		//check if there is a user account linked to google login
 		if(1==2){
-			return true.
+			return true;
 		}else{
-			return false. 
+			return false;
 		}
 	}
 

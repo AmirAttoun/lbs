@@ -32,7 +32,7 @@ class Login extends Controller {
 				$openid = new Openid;
 				if($openid->validate()){
 					$google_open_id = $openid->__get('identity');
-					if($this->user->check_google_login_exists){
+					if($this->user->check_if_google_login_exists()){
 						//set cookies and such
 						//$this->user->login_google();
 						$this->load->view('login/login_success_view');
