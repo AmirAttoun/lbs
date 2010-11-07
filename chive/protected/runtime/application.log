@@ -1,0 +1,17 @@
+2010/11/07 21:05:32 [error] [php] ob_end_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete and flush buffer. No buffer to delete or flush. (/Users/jorismorger/longboardspots/chive/protected/models/ExportPage.php:169)
+Stack trace:
+#0 /Users/jorismorger/longboardspots/chive/protected/controllers/TableController.php(484): ExportPage->run()
+#1 /Users/jorismorger/longboardspots/chive/yii/web/actions/CInlineAction.php(32): TableController->actionExport()
+#2 /Users/jorismorger/longboardspots/chive/yii/web/CController.php(300): CInlineAction->run()
+#3 /Users/jorismorger/longboardspots/chive/yii/web/filters/CFilterChain.php(129): TableController->runAction()
+#4 /Users/jorismorger/longboardspots/chive/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Users/jorismorger/longboardspots/chive/yii/web/CController.php(993): CAccessControlFilter->filter()
+#6 /Users/jorismorger/longboardspots/chive/yii/web/filters/CInlineFilter.php(59): TableController->filterAccessControl()
+#7 /Users/jorismorger/longboardspots/chive/yii/web/filters/CFilterChain.php(126): CInlineFilter->filter()
+#8 /Users/jorismorger/longboardspots/chive/yii/web/CController.php(283): CFilterChain->run()
+#9 /Users/jorismorger/longboardspots/chive/yii/web/CController.php(257): TableController->runActionWithFilters()
+#10 /Users/jorismorger/longboardspots/chive/yii/web/CWebApplication.php(320): TableController->run()
+#11 /Users/jorismorger/longboardspots/chive/yii/web/CWebApplication.php(120): CWebApplication->runController()
+#12 /Users/jorismorger/longboardspots/chive/yii/base/CApplication.php(135): CWebApplication->processRequest()
+#13 /Users/jorismorger/longboardspots/chive/index.php(76): CWebApplication->run()
+REQUEST_URI=/chive/schema/lbs/tables/User/export

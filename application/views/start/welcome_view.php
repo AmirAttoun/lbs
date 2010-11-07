@@ -1,6 +1,3 @@
-
 <?=lang('start.hello')?> <br />
 
-<form action="index.php/login/google_openid" method="post">
-    <button>Login with Google</button>
-</form>
+<a href="index.php/login/login_openid/https://www.google.com/accounts/o8/id"><img src="application/images/login/openid_google.png" /></a>
