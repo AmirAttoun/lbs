@@ -1,5 +1,6 @@
 
 <?=lang('start.hello')?> <br />
-<?=anchor('start.enter', 'Enter')?>
 
-
+<form action="index.php/login/google_openid" method="post">
+    <button>Login with Google</button>
+</form>
