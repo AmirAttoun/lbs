@@ -25,7 +25,7 @@ $config['langs'] = array(
     'es'=>array('folder'=>'spanish','name'=>'español'),
     'fr'=>array('folder'=>'french','name'=>'francais'),
     'de'=>array('folder'=>'german','name'=>'deutsch'),
-    );
+);
 
 // Now we define language as LANG constant
 $exploded = explode('/',$_SERVER['REQUEST_URI']);
@@ -68,7 +68,7 @@ $config['index_page'] = '';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
-$config['uri_protocol']	= "AUTO";
+$config['uri_protocol']	= "PATH_INFO";
 
 /*
 |--------------------------------------------------------------------------
